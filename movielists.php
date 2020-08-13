@@ -20,7 +20,7 @@
     <ul class="list-group">
       <li class="list-inline-item mb-1">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary ">
+          <label class="btn btn-secondary">
             <input type="radio" name="movies" id="" autocomplete="off" checked="" value="Avengers"> #1 Avengers
           </label>
         </div>

@@ -143,7 +143,27 @@ class User extends Database{
     }
   }
 
-  
+  public function deleteMovieTime($scheduleID){
+    $sql = "DELETE FROM schedule WHERE schedule_id ='$scheduleID'";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header('location:ticket.php');
+    }else{
+      return FALSE;
+    }
+  }
+
+  public function changeMovieTime($scheduletime,$scheduleID){
+    $sql = "UPDATE schedule SET schedule_time='$scheduletime' WHERE schedule_id='$scheduleID'";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header('location:ticket.php');
+    }else{
+      echo "error changing movie";
+    }
+  }
 
   public function selectGeneration($fee){
     $sql = "INSERT INTO genefee(generation_fee) VALUE ('$fee')";
@@ -168,6 +188,28 @@ class User extends Database{
       return $row;
     }else{
       return FALSE;
+    }
+  }
+
+  public function deleteGeneration($geneID){
+    $sql = "DELETE FROM genefee WHERE gene_id ='$geneID'";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header('location:ticket.php');
+    }else{
+      return FALSE;
+    }
+  }
+
+  public function changeGeneration($genefee,$geneID){
+    $sql = "UPDATE genefee SET generation_fee='$genefee' WHERE gene_id='$geneID'";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header('location:ticket.php');
+    }else{
+      echo "error changing movie";
     }
   }
 
@@ -198,6 +240,28 @@ class User extends Database{
       return $row;
     }else{
       return FALSE;
+    }
+  }
+
+  public function deletePaysystem($paysystemID){
+    $sql = "DELETE FROM pay_system WHERE paysystem_id ='$paysystemID'";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header('location:ticket.php');
+    }else{
+      return FALSE;
+    }
+  }
+
+  public function changePaysystem($paysystem,$paysystemID){
+    $sql = "UPDATE pay_system SET payment='$paysystem' WHERE movie_id='$paysystemID'";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header('location:ticket.php');
+    }else{
+      echo "error changing movie";
     }
   }
 

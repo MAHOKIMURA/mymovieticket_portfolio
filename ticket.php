@@ -28,7 +28,10 @@ include 'movieAction.php';
       <div class="con-2">
         <table class="table table-bordered table-info table-hover table-striped mt-5">
           <thead>
-            <td colspan="2">Movie</td>
+            <td colspan="3">Movie</td>
+            <td colspan="3">Time</td>
+            <td colspan="3">Ticket Fee</td>
+            <td colspan="3">Payment</td>
             <td colspan="">Option</td>
           </thead>
           <tbody>

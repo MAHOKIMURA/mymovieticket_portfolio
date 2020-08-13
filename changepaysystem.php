@@ -1,17 +1,13 @@
 <?php
-
-include 'movieAction.php';
-
-// $loginID = $_SESSION['register'];
-// $User2->getloggedInUser($loginID);
-
+// include 'movieAction';
+// $movieID = $row['movie_id'];
 ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>HomePage</title>
+  <title>Pay</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,23 +18,33 @@ include 'movieAction.php';
 
 <body>
   <div class="jumbotron">
-    <div class="float-left">
-      <nav class="nav">
-        <a href="movielists.php" class="nav-link ">Reserve movie</a>
-        <a href="ticket.php" class="nav-link">Your ticket</a>
-      </nav>
 
-
-    </div>
-    <div class="float-right">
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="registerM.php">Sign In</a></li>
-        <li class="list-inline-item"><a href="logoutM.php">Logout</a></li>
-      </ul>
-
-    </div>
   </div>
+  <div class="container">
 
+    <form action="movieAction.php" method="post">
+    <input type="text" name="paysystemID" id="" value="<?php echo $_GET['paysystemID']?>" placeholder="" class="form-control">
+      <label for="">How to Pay?</label>
+      <br>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary ">
+          <input type="radio" name="payment" id="" autocomplete="off" checked="" value="Cash">Cash
+        </label>
+      </div>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary ">
+          <input type="radio" name="payment" id="" autocomplete="off" checked="" value="Card">Card
+        </label>
+      </div>
+
+      <input type="text" name="cardname" id="" class="form-control mt-3" placeholder="cardname">
+      <input type="text" name="bankaccount" id="" class="form-control mt-3" placeholder="account">
+
+      <br><br>
+      <button type="submit" name="next4">Next</button>
+    </form>
+
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
