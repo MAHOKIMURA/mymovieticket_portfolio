@@ -31,32 +31,7 @@
             <p class="screenNumber">SCREEN 1</p>
                     </label>
             <form action="movieAction.php" method="post">
-              <label for="">Number</label>
-              <ol class="inline-group">
-                <li class="list-inline-item">
-                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
-                      <input type="radio" name="showtime" id="" autocomplete="off" checked="" value="9:30~11:30"> 9:30
-                    </label>
-                  </div>
-                </li>
-                <li class="list-inline-item">
-                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary ">
-                      <input type="radio" name="showtime" id="" autocomplete="off" checked="" value="15:00~17:00"> 15:00
-                    </label>               
-                     
-                  </div>
-                </li>
-                <li class="list-inline-item">
-                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary ">
-                      <input type="radio" name="showtime" id="" autocomplete="off" checked="" value="20:00~22:00"> 20:00
-                    </label>
-                    
-                  </div>
-                </li>
-              </ol>
+              <input type="text" name="showtime" id="">
               <button type="submit" name="next2" class="btn btn-primary">Buy ticket</button>
             </form>
           </li>
